@@ -1,0 +1,262 @@
+$rojo : rgba(228, 53, 53, 0.897);
+$verde : rgba(43, 207, 43, 0.801);
+$celeste : rgba(0, 138, 202, 0.787);
+$naranja:rgba(255, 187, 62, 0.876);
+$color-body: #f2f2f2;
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    width: 100%;
+    background-color: color-body;
+    font-family: 'Roboto', sans-serif;
+
+
+    .header{
+        font-size: 20px;
+        line-height: 45px;
+        height: 45px;
+        color: #fff;
+        margin: 0 0 80px 0 ;
+      /*   align-items: center; */
+        /* background: #5e5e5e;  */
+        background: linear-gradient(to top, rgb(39, 39, 39),rgb(93, 93, 93));
+        /* background-color: rgb(196, 255, 148); */
+        display: grid;
+        grid-template-columns: 2fr 9fr 1fr;
+        grid-template-rows: repeat(1, auto);
+        grid-template-areas: "widget titulo perfil"; 
+        .widget{
+            grid-column-start: widget;
+            grid-column-end: widget;
+            height: inherit;
+            font-size: 12px;
+            margin-left: 15px;
+            p{
+                display: inline-block;
+               /* line-height: 1em; */
+            }
+            .fecha{
+                height: inherit;
+                display: inline-block;
+               /* width: 50%; */
+            }
+            .reloj{
+                 height: inherit;
+                 display: inline-block;
+                .caja-segundos{
+                    display: inline-block;
+                } 
+            }
+        }
+        .titulo{
+            font-family: 'Playball', cursive;
+            font-size: 30px; 
+            color: rgb(0, 219, 66);
+            text-shadow:  2px 2px 10px rgba(255, 255, 255, 0.493);
+            grid-column-start: titulo;
+            grid-column-end: titulo; 
+            text-align: center;
+            padding-right: 100px;
+            p{
+                display: inline-block;
+               /* padding: 0 10px 0 10px; */
+            }
+            .hoja1{
+                transform: rotate(-90deg);
+            }
+            .hoja2{
+                padding-bottom: 10px;
+                transform: rotate(40deg);
+            }
+        }
+        button{
+            height: inherit;
+            padding: 0 20px 0 0;
+            background: linear-gradient(to top, rgb(39, 39, 39),rgb(93, 93, 93));
+            border: none;
+            color: #fff;
+            cursor: pointer;
+            /* display: flex;
+            align-items: center; */
+            grid-column-start: perfil;
+            grid-column-end: perfil; 
+            text-align: end;
+            &:hover{
+                background: linear-gradient(to top, rgb(110, 110, 110),rgb(93, 93, 93));
+            }
+            p{  
+                padding-left: 3px;
+                padding-right: 12px; 
+                display: inline-block;
+            }
+            .icono{
+               /*  padding: 0 3px 0 20px; */
+                border: none;
+                color: rgb(219, 219, 219);
+                /* width: 50%; */
+                font-size: 20px; 
+            }
+        }
+    } 
+
+    .bienvenido{
+        font-size: 50px;
+        line-height: 30px;
+        text-align: center;
+        margin: auto;
+        padding: 30px;
+        margin-top: 80px;
+        p{  
+            padding-bottom: 20px;
+            text-shadow:  10px 5px 10px rgba(0,0,0, .35);
+            color: rgba(149, 149, 149, 0.979);
+            -webkit-text-stroke: 1px rgb(128, 128, 128); 
+        }
+    }
+
+    .contenedor{
+        margin: 0px 10px 0 10;
+        width: 100%;
+        max-width: 1000px;
+       /*  border:10px solid black; */
+        margin: auto;
+        font-size: 50px;
+        line-height: 50px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(490px, 1fr)); //en grid se utiliza la medida fr, representaría al %
+        /* grid-template-columns: repeat(2, 1fr); Lo mismo que el anterior */
+        grid-template-rows: repeat(2, 150px);
+        grid-gap: 20px;
+        a{
+            text-decoration: none;
+            color: #fff;
+            box-shadow: 2px 2px 10px rgba(0,0,0, .35);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .productos{
+            background-color: $rojo;
+            &:hover{
+                background-color: rgb(224, 21, 21);
+            }
+            p{
+                padding-right: 20px;
+            }
+        } 
+        .proveedores{
+            background-color: $verde;
+            &:hover{
+                background-color: rgb(0, 173, 0);
+            }
+            p{
+                padding-right: 30px;
+            }
+        }.ventas{
+            background-color: $celeste;
+            &:hover{
+                background-color: rgb(47, 99, 241);
+            }
+            p{
+                padding-right: 40px;
+            }
+        }
+        .pedidos{
+            background-color: $naranja;
+            &:hover{
+                background-color: rgb(255, 145, 36);
+            }
+            p{
+                padding-right: 40px;
+            }
+        }
+
+    }
+   
+}    
+
+/* @media screen and (max-width: 1350px){
+    body{
+        .header{
+            display: grid;
+            grid-template-areas: "widget widget widget titulo titulo titulo titulo titulo titulo titulo titulo perfil"; 
+            grid-template-columns: repeat(12, 1fr);
+            grid-template-rows: repeat(1, auto);
+        }
+    }
+
+   
+} */
+
+@media screen and (max-width: 1000px){
+    body{
+        .contenedor{
+            grid-template-columns: repeat(auto-fill, 1fr); //en grid se utiliza la medida fr, representaría al %
+            grid-template-rows: repeat(4, 100px);
+            grid-gap: 5px;
+        }
+    } 
+}
+
+@media screen and (max-width: 400px){
+    body{
+        .header{
+            margin-bottom: 10px;
+        }
+        .auxiliar{
+            display: flex;
+            flex-direction: column-reverse;
+            .contenedor{
+                margin: 50px 0 0 7px;
+                grid-template-columns: 95%;
+                grid-template-rows: repeat(4, 60px);
+                grid-gap: 3px; 
+                .productos{
+                    font-size: 1.5rem;
+                    border-radius: 10px;
+                    p{
+                        padding-right: 27px;
+                        margin-left: 24px;
+                    }
+                }
+                .proveedores{
+                    grid-row-start: 2;
+                    grid-row-end: 3;
+                    font-size: 1.5rem;
+                    border-radius: 10px;
+                }
+                .ventas{
+                    grid-row: 3/4; /*otra forma de poner lo anterior*/
+                    font-size: 1.5rem;
+                    border-radius: 10px;
+                    p{
+                        margin: 0 40px 0 50px; 
+                        padding: 0; 
+                    }
+                } 
+                .pedidos{
+                    grid-row-start: 4;
+                    grid-row-end: 5;
+                    font-size: 1.5rem;
+                    border-radius: 10px;
+                    p{
+                        margin-left: 47px;
+                        padding-right: 32px;
+                    }
+                } 
+            } 
+        }
+        .bienvenido{
+            p{
+                font-size: 2rem;
+            }
+        }
+
+    }
+  
+  
+}

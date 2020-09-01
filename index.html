@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Control de Stock</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playball&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/pagina-principal/principal.css">
+    <script src="https://kit.fontawesome.com/e27dcb2d38.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="widget">
+            <div class="fecha">
+                <p id="diaSemana" class="diaSemana"></p>
+                <p id="diaMes" class="dia"></p>
+                <p>de</p>
+                <p id="mes" class="mes"></p>
+                <p>del</p>
+                <p id="anio" class="year"></p>
+            </div>
+
+            <div class="reloj">
+                <p id="horas" class="horas"></p>
+                <p>:</p>
+                <p id="minutos" class="minutos"></p>
+                <p>:</p>
+                <div class="caja-segundos">
+                    <p id="segundos" class="segundos"></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="titulo">
+            <i class="hoja1 fab fa-pagelines"></i>
+            <p>El Gringo Natural</p>
+            <i class="hoja2 fab fa-pagelines"></i>
+        </div>
+
+        <button>
+            <p>Ver perfil</p><i class="icono far fa-user"></i>
+            <i class="fas fa-caret-down"></i>
+        </button>
+    </header>
+
+
+    <section class="contenedor">
+        <a class="productos" id="productos">
+            <p>Productos</p>
+            <i class="fas fa-store"></i>
+        </a>
+        <a href="" class="proveedores" id="proveedores">
+            <p>Proveedores</p>
+            <i class="fas fa-people-carry"></i>
+        </a>
+        <a href="" class="ventas" id="ventas">
+            <p>Ventas</p>
+            <i class="fas fa-dollar-sign"></i>
+        </a>
+        <a href="" class="pedidos" id="pedidos">
+            <p>Pedidos</p>
+            <i class="fas fa-truck-moving"></i>
+        </a>
+    </section>
+
+    <div class="bienvenido">
+        <p>Bienvenido al sistema.</p>
+        <i class="far fa-handshake"></i>
+        <!--  <i class="far fa-smile-beam"></i> -->
+    </div>
+
+    <script src="js/reloj/reloj.js"></script>
+    <script src="js/principal/principal.js"></script>
+</body>
+
+</html>
